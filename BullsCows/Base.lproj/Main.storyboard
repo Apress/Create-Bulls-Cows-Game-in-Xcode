@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BullsCows" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KGQ-Qb-Gtk">
+                                <rect key="frame" x="8" y="67" width="377" height="200"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-kA-8e4">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.333333333333329" height="200"/>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXS-xC-D8E">
+                                        <rect key="frame" x="94.333333333333343" y="0.0" width="94.333333333333343" height="200"/>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-Ml-GhT">
+                                        <rect key="frame" x="188.66666666666666" y="0.0" width="93.999999999999972" height="200"/>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ho0-Ya-y4K">
+                                        <rect key="frame" x="282.66666666666669" y="0.0" width="94.333333333333314" height="200"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="rBG-0y-Ssq"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yk6-wq-lbS">
+                                <rect key="frame" x="8" y="275" width="377" height="50"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="D5r-y2-mKT"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTx-ns-mDX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Guess the number!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wzj-6l-zx0">
+                                <rect key="frame" x="8" y="333" width="377" height="477"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KGQ-Qb-Gtk" secondAttribute="trailing" constant="8" id="2hs-Uq-XCG"/>
+                            <constraint firstItem="KGQ-Qb-Gtk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="6W7-OB-PZk"/>
+                            <constraint firstItem="Yk6-wq-lbS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="7dg-eE-dKq"/>
+                            <constraint firstItem="Yk6-wq-lbS" firstAttribute="top" secondItem="KGQ-Qb-Gtk" secondAttribute="bottom" constant="8" id="PSp-Vn-5YF"/>
+                            <constraint firstItem="wzj-6l-zx0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="QL6-ni-qg3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wzj-6l-zx0" secondAttribute="bottom" constant="8" id="Y0Q-JP-lTP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yk6-wq-lbS" secondAttribute="trailing" constant="8" id="gdm-gt-huB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wzj-6l-zx0" secondAttribute="trailing" constant="8" id="kLQ-o1-8kr"/>
+                            <constraint firstItem="wzj-6l-zx0" firstAttribute="top" secondItem="Yk6-wq-lbS" secondAttribute="bottom" constant="8" id="lMW-tz-MYZ"/>
+                            <constraint firstItem="KGQ-Qb-Gtk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="zgf-U9-SNE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="Yk6-wq-lbS" id="ICF-JS-qkA"/>
+                        <outlet property="pv1" destination="Pwz-kA-8e4" id="ueq-5P-553"/>
+                        <outlet property="pv2" destination="IXS-xC-D8E" id="1Te-rP-3nc"/>
+                        <outlet property="pv3" destination="F0k-Ml-GhT" id="8a9-WK-RnX"/>
+                        <outlet property="pv4" destination="ho0-Ya-y4K" id="vRe-X0-sOg"/>
+                        <outlet property="textView" destination="wzj-6l-zx0" id="dvh-xV-Jia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
